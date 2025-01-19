@@ -226,7 +226,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -250,8 +250,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
-  m_LocalRotation: {x: -1.4599123e-15, y: 0.2422915, z: 3.6458776e-16, w: 0.9702035}
-  m_LocalPosition: {x: -0.15, y: 1.74, z: -10}
+  m_LocalRotation: {x: -0.000000014328937, y: 0.27445963, z: 0.0000000040897676, w: 0.96159863}
+  m_LocalPosition: {x: 3.7, y: 1.74, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -602,7 +602,7 @@ Transform:
   m_GameObject: {fileID: 893403553}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.15, y: 1.74, z: 0}
+  m_LocalPosition: {x: 3.7, y: 1.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -727,7 +727,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 34
-    OrthographicSize: 6
+    OrthographicSize: 7
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -753,8 +753,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159940743}
   serializedVersion: 2
-  m_LocalRotation: {x: -1.5646401e-15, y: 0.2422915, z: -5.477222e-17, w: 0.9702035}
-  m_LocalPosition: {x: -0.15, y: 1.74, z: -10}
+  m_LocalRotation: {x: -0.000000014328937, y: 0.27445963, z: 0.0000000040897676, w: 0.96159863}
+  m_LocalPosition: {x: 3.7, y: 1.74, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -820,6 +820,7 @@ GameObject:
   - component: {fileID: 1901933734}
   - component: {fileID: 1901933733}
   - component: {fileID: 1901933736}
+  - component: {fileID: 1901933737}
   m_Layer: 0
   m_Name: Level Sprite Shape
   m_TagString: Untagged
@@ -1368,7 +1369,7 @@ EdgeCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
@@ -1646,6 +1647,24 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!252 &1901933737
+SurfaceEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901933732}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 1
+  m_SpeedVariation: 0
+  m_ForceScale: 0.1
+  m_UseContactForce: 0
+  m_UseFriction: 1
+  m_UseBounce: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
