@@ -8,11 +8,9 @@ public class FinishLine : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
-        {
-            finishEffect.Play();
-            Invoke(nameof(ReloadScene), loadDelay);
-        }
+        if (!other.CompareTag("Player")) return;
+        finishEffect.Play();
+        Invoke(nameof(ReloadScene), loadDelay);
     }
 
     private void ReloadScene()
