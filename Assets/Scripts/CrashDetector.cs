@@ -1,13 +1,22 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CrashDetector : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D other)
+    [SerializeField] private float loadDelay = .5f;
+    [SerializeField] private ParticleSystem crashEffect;
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Ground")
+        if (other.CompareTag("Ground"))
         {
-            Debug.Log("You crashed!");
+            crashEffect.Play();
+            Invoke(nameof(ReloadScene), loadDelay);
         }
-        
+    }
+
+    private void ReloadScene()
+    {
+        SceneManager.LoadScene(0);
     }
 }
