@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 
 public class CrashDetector : MonoBehaviour
 {
@@ -11,6 +10,7 @@ public class CrashDetector : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Ground")) return;
+        FindFirstObjectByType<PlayerController>().DisableControls();
         crashEffect.Play();
         GetComponent<AudioSource>().PlayOneShot(crashSfx);
         Invoke(nameof(ReloadScene), loadDelay);

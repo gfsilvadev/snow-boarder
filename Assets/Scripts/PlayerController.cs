@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float torqueAmount = 10f;
     [SerializeField] private float boostSpeed = 40f;
     [SerializeField] private float baseSpeed = 25f;
+    public bool allowMovement = true;
     private Rigidbody2D _rb2d;
     private SurfaceEffector2D _surfaceEffector;
 
@@ -14,11 +15,16 @@ public class PlayerController : MonoBehaviour
         _surfaceEffector = FindFirstObjectByType<SurfaceEffector2D>();
     }
 
-    // Update is called once per frame
     private void Update()
     {
+        if (!allowMovement) return;
         RotatePlayer();
         RespondToBoost();
+    }
+
+    public void DisableControls()
+    {
+        allowMovement = false;
     }
 
     private void RespondToBoost()
